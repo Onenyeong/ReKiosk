@@ -97,5 +97,16 @@ public class OrderBasket {
 
 
     }
+    public void confirmOrderBasket(){
+        int orderConfirmNumber = getConfirmNumberFromUsr();
+        if (orderConfirmNumber == 0) {
+            System.out.println("주문이 완료되었습니다");
+            showOrderTotal();
+            orderTimer.timerRun();
+        } else {
+            System.out.println("취소되었습니다. 메뉴로 돌아갑니다");
+//                        getReturnMenuCategoryView();
+        }
+    }
 
 }
